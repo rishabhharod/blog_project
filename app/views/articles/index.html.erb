@@ -1,0 +1,13 @@
+<h2>hello this is my first rails project!</h2>
+<h1>Articles<h1>
+<h3>ur blog has <%= Article.public_count %> articles and counting!</h3>
+<u>
+  <% @articles.each do |article| %> 
+  <li>
+    <a herf = "<%= article_path(article) %>">  
+    <%= link_to article.title,article %>
+    </a>
+  </li>
+  <% end %>
+</u><br>
+<%= link_to "New article", new_article_path %>
